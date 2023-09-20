@@ -30,7 +30,7 @@
             color: #4caf50;
         }
     </style>
-    
+
 </head>
 <body>
 
@@ -40,10 +40,6 @@
 
         <a href="{{url('create')}}">Submit Message</a>
         <a href="{{url('show')}}">View/Delete Messages</a>
-
-{{--         <?php
-        print_r($tweets)
-        ?> --}}
 
     </div>
 
