@@ -12,4 +12,7 @@ class Tweet extends Model
     // IS NOT NECESSARY
     // LARAVEL AUTOMATICALLY LINKS 'Tweet' with 'tweets'
     protected $table = 'tweets';
+
+    protected $guarded = [];
+
 }

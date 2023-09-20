@@ -3,17 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Tweet;
 
 class TweetController extends Controller
 {
     public function index()
     {
-        return view('tweets/index');
+        //return view('tweets/index');
 
         // Get Data from the DB
+        $tweets = Tweet::all();
 
-
-        //
+        //Send the Data to View
+        return view('tweets/index', [
+            'tweets' => $tweets
+        ]);
     }
 
     public function create()
@@ -34,3 +38,4 @@ class TweetController extends Controller
         return view('tweets/easterEgg/succulent_massage');
     }
 }
+
