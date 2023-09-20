@@ -17,10 +17,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('tweets', function()
+Route::get('tweets', function ()
     {
         // This also works:
         // return view('/tweets.index');
 
         return view('tweets/index');
+    });
+
+Route::get('create', function()
+    {
+        return view('tweets/create');
+    });
+
+Route::get('show', function()
+    {
+        return view('tweets/show');
     });
