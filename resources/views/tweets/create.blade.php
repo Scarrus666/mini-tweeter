@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     @vite('resources/css/app.css')
     <title>Message Form</title>
-    <style>
+{{--     <style>
         body 
         {
             font-family: Arial, sans-serif;
@@ -62,7 +62,7 @@
                 width: 100%;
             }
         }
-    </style>
+    </style> --}}
 </head>
 <body>
 
@@ -74,10 +74,10 @@
             @csrf
 
             <label for="title">Title:</label>
-            <input type="text" id="title" name="title" required>
+            <input type="text" id="title" name="title">
 
             <label for="text">Message:</label>
-            <textarea id="text" name="text" rows="4" cols="50" required></textarea><br>
+            <textarea id="text" name="text" rows="4" cols="50" ></textarea><br>
 
             <button class="viewButton" type="submit" value="Submit">Post Tweet</button>
         </form>
@@ -85,12 +85,14 @@
     </div>
 
     @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
+        <div class="container">
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
         </div>
     @endif
 

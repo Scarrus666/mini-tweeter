@@ -6,7 +6,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Tweet;
+use App\Http\Requests\StorePostRequest;
 // use App\Models\Post;
+
 
 class Post extends Model
 {
@@ -111,12 +113,14 @@ class TweetController extends Controller
         
         // Validation if needed
         $request->validate([
-            'title' => 'required|max:255',
-            'content' => 'required',
+            'title' => 'required|max:70',
+            'text' => 'required|max:280',
         ], [
             'title.required' => 'The title field is required.',
             'content.required' => 'The content field is required.',
         ]);
+
+        $request->input('title'); // Access the value of the 'title' field
         
         // $request->title; 
         // $request->text;
