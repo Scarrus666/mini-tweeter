@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message Form</title>
     <style>
-        body {
+        body 
+        {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
@@ -14,7 +15,8 @@
             align-items: center;
             height: 100vh;
         }
-        .container {
+        .container 
+        {
             background-color: #fff;
             padding: 30px;
             border-radius: 10px;
@@ -23,10 +25,12 @@
             width: 100%;
             text-align: center;
         }
-        h1 {
+        h1 
+        {
             color: #333;
         }
-        label, textarea, input {
+        label, textarea, input 
+        {
             display: block;
             margin: 10px 0;
             width: calc(100% - 20px);
@@ -36,16 +40,19 @@
             border-radius: 5px;
             box-sizing: border-box;
         }
-        input[type="submit"] {
+        input[type="submit"] 
+        {
             background-color: #4caf50;
             color: #fff;
             font-size: 18px;
             cursor: pointer;
         }
-        input[type="submit"]:hover {
+        input[type="submit"]:hover 
+        {
             background-color: #45a049;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 600px) 
+        {
             .container {
                 padding: 20px;
             }
@@ -61,14 +68,15 @@
 
         <h1>Message Form</h1>
 
-        <form action="#" method="post">
+        <form action="/tweets" method="post">
+            @csrf
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" required>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+            <label for="text">Message:</label>
+            <textarea id="text" name="text" rows="4" cols="50" required></textarea><br>
 
-            <input type="submit" value="Submit">
+            <button type="submit" value="Submit">
         </form>
 
     </div>

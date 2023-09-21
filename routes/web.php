@@ -23,6 +23,12 @@ Route::get('tweets', [TweetController::class, 'index']);
 
 Route::get('create', [TweetController::class, 'create']);
 
-Route::get('show', [TweetController::class, 'show']);
+// Route::get('show', [TweetController::class, 'show']);
+
+Route::get('tweets/{id}', [TweetController::class, 'show']);
 
 Route::get('massage', [TweetController::class, 'massage']);
+
+Route::delete('tweets/{id}', [TweetController::class, 'deleteTweet']);
+
+Route::post('tweets', [TweetController::class, 'store']);
