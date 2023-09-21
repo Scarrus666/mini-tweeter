@@ -1,12 +1,47 @@
 <?php
 
+namespace App\Models;
 namespace App\Http\Controllers;
-// namespace App\Models;
 
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Tweet;
-use App\Models\Post;
+// use App\Models\Post;
+
+class Post extends Model
+{
+    public function store(Request $request)
+    {
+        // Validation if needed
+        $request->validate([
+            'title' => 'required|max:255',
+            'text' => 'required',
+        ]);
+
+        // $request->title; 
+        // $request->text;
+
+        // Create a new post
+        $post = new Post;
+        $post->title = $request->input('title');
+        $post->text = $request->input('text');
+
+        dd($post);
+        // $post->save();
+
+        try 
+        {
+            $post->save();
+        }
+        
+        catch (\Exception $a)
+        {
+            // Handle the exception, or log it for further investigation
+        }
+        return redirect('/tweets'); // Redirect after deletion
+
+    }
+}
 
 
 class TweetController extends Controller
@@ -70,32 +105,49 @@ class TweetController extends Controller
     }
 
     public function store(Request $request)
+    {
+
+        
+        
+        // Validation if needed
+        $request->validate([
+            'title' => 'required|max:255',
+            'content' => 'required',
+        ], [
+            'title.required' => 'The title field is required.',
+            'content.required' => 'The content field is required.',
+        ]);
+        
+        // $request->title; 
+        // $request->text;
+        
+        // Create a new post
+        $tweet = new \App\Models\Tweet;
+        $tweet->title = $request->input('title');
+        $tweet->text = $request->input('text');
+        //$tweet->title = 'New Post Title';
+        //$post->text = 'Lorem ipsum...';
+        
+        \App\Models\Tweet::create([
+            'title' => $tweet->title,
+            'text' => $tweet->text
+        ]);
+
+        //dd($tweet);
+        //$post->save();
+
+        try 
         {
-            // Validation if needed
-            $request->validate([
-                'title' => 'required|max:255',
-                'text' => 'required',
-            ]);
-
-            // Create a new post
-            $post = new Post;
-            $post->title = $request->input('title');
-            $post->text = $request->input('text');
-
-            dd($post);
-            // $post->save();
-
-            return redirect('/tweets'); // Redirect after deletion
-            try 
-                {
-                    $post->save();
-                }
-
-            catch (\Exception $a)
-                {
-                    // Handle the exception, or log it for further investigation
-                }
-
+            $tweet->save();
         }
+        
+        catch (\Exception $a)
+        {
+            // Handle the exception, or log it for further investigation
+        }
+
+        return redirect('/tweets'); // Redirect after deletion
+    }
+
 }
 
