@@ -7,7 +7,7 @@
     <title>Tweets - @yield('title')</title>
 </head>
 <body>
-
+    @section('header')
     <header class="sticky-header">
         <div class="container">
             <div class="header-left">
@@ -19,11 +19,13 @@
             </div>
         </div>
     </header>
+    @endsection
 
     <div class="content">
         <!-- Your main content goes here -->
     </div>
 
+    @section('footer')
     <footer>
         <div class="container">
             <div class="footer-left">
@@ -34,6 +36,7 @@
             </div>
         </div>
     </footer> 
+    @endsection
 </body>
 </html>
 

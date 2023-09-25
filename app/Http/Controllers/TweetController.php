@@ -12,6 +12,8 @@ use App\Http\Requests\StorePostRequest;
 
 class Post extends Model
 {
+/*     Removed because of Redundancy
+
     public function store(Request $request)
     {
         // Validation if needed
@@ -42,7 +44,7 @@ class Post extends Model
         }
         return redirect('/tweets'); // Redirect after deletion
 
-    }
+    } */
 }
 
 
@@ -112,10 +114,11 @@ class TweetController extends Controller
         
         
         // Validation if needed
-        $request->validate([
+        $validated = $request->validate([
             'title' => 'required|max:70',
             'text' => 'required|max:280',
-        ], [
+        ], 
+        [
             'title.required' => 'The title field is required.',
             'content.required' => 'The content field is required.',
         ]);
@@ -140,6 +143,8 @@ class TweetController extends Controller
         //dd($tweet);
         //$post->save();
 
+/* The following also works as a save method
+
         try 
         {
             $tweet->save();
@@ -148,7 +153,7 @@ class TweetController extends Controller
         catch (\Exception $a)
         {
             // Handle the exception, or log it for further investigation
-        }
+        } */
 
         return redirect('/tweets'); // Redirect after deletion
     }
