@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {{-- @extends('components') --}}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini-Tweeter von Alex Iordachel</title>
-    @vite('resources/css/app.css')
+    @vite('resources/css/app_old.css')
 </head>
 <body>
 
@@ -22,6 +23,7 @@
 
             <h3>{{ $tweet->title }}</h3>
             <p>{{ $tweet->text }}</p>
+            <p>Updated at {{ $tweet->updated_at }}</p>
 
             <a href="/tweets/{{$tweet->id}}">
                 <button class="viewButton">View complete Message</button>

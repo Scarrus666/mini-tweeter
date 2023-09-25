@@ -15,6 +15,7 @@
         <div class="message">
             <h2>{{ $tweet->title }}</h2>
             <p>{{ $tweet->text }}</p>
+            <p>Updated at {{ $tweet->updated_at }}</p>
 
             <form action="/tweets/{{$tweet->id}}" method="POST">
                 @csrf
