@@ -20,6 +20,12 @@
         </div> --}}
 
     @section('content')
+
+        <div class="user">
+            <p>FEED VON</p>
+            <h1>Alexandru Iordachel</h1>
+        </div>
+
         @foreach ($tweets as $tweet)
         <div class="container">
             

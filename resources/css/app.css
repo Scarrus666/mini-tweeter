@@ -16,6 +16,26 @@ body {
     box-shadow: 1px 1px 1px 1px #aaaaaa;
 }
 
+.user {
+    width: 54%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: left;
+    align-self: center;
+}
+
+.user h1 {
+    color: black;
+    font-size: 32px;
+}
+
+.user p {
+    font-family: inter;
+    color: #888888;
+    font-size: 16px;
+}
+
 .container {
     width: 50%;
     max-width: 1200px;
