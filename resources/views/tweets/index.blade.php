@@ -29,9 +29,9 @@
         @foreach ($tweets as $tweet)
         <div class="container">
             
+            <p class="date">{{ $tweet->updated_at }}</p>
             <h3>{{ $tweet->title }}</h3>
             <p>{{ $tweet->text }}</p>
-            <p>Updated at {{ $tweet->updated_at }}</p>
             
             <a href="/tweets/{{$tweet->id}}">
                 <button class="viewButton">View complete Message</button>

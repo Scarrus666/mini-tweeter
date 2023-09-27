@@ -29,7 +29,7 @@
     @yield('footer')
     <footer class="footer">
             <p class="footer-left">Mini-Twitter built with Laravel</p>
-            <p class="footer-right">© Vorname Nachname</p>
+            <p class="footer-right">© Alexandru Iordachel</p>
     </footer>
     
 </body>

@@ -17,8 +17,18 @@ body {
     padding: 10px 0;
 }
 
+h3 {
+    margin-left: 20px;
+    margin-right: 20px;
+} 
+
+p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .user {
-    width: 54%;
+    width: 50%;
     max-width: 1200px;
     margin: auto;
     margin-top: 50px;
@@ -35,13 +45,47 @@ body {
     font-family: inter;
     color: #888888;
     font-size: 16px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.user button {
+    display: table;
+    margin-right: 10px; /* Adjust the spacing between the buttons as needed */
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.user button.editButton,
+.user button.deleteButton {
+    display: inline-block !important; /* Add !important to ensure this style overrides any conflicting styles */
+    border-radius: 8px;
+}
+
+.user button.editButton {
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+}
+
+.user button.deleteButton {
+    color: white;
+    background-color: #FF0000;
+}
+
+.date {
+    font-size: 14px;
+    color: #888888;
+    text-align: right;
+    margin-right: 20px;
 }
 
 .container {
     width: 50%;
     max-width: 1200px;
     margin: auto auto 20px;
-    padding: 20px;
     background: #FFFFFF;
     border-radius: 10px;
     border-color: black;
