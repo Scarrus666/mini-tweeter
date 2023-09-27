@@ -3,6 +3,9 @@ body {
     background-color: #F9F9F9;
     margin: 0;
     padding-top: 40px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .sticky-header {
@@ -12,8 +15,6 @@ body {
     margin-bottom: 25px;
     background-color: #fff;
     padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-    box-shadow: 1px 1px 1px 1px #aaaaaa;
 }
 
 .user {
@@ -39,23 +40,34 @@ body {
 .container {
     width: 50%;
     max-width: 1200px;
-    margin: 20px auto 0; /* Adjust the margin-top based on your header's height */
-    margin-bottom: auto;
+    margin: auto auto 20px;
     padding: 20px;
     background: #FFFFFF;
     border-radius: 10px;
     border-color: black;
     border-width: 0px;
     border-style: solid;
-    box-shadow: 1px 1px 1px 1px #aaaaaa;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.content::after {
+    content: "";
+    flex: 1;
 }
 
 .header-left {
     float: left;
+    margin-left: 170px;
 }
 
 .header-right {
     float: right;
+    margin-right: 170px;
 }
 
 .header-right a {
@@ -63,14 +75,12 @@ body {
 }
 
 .footer {
+    margin-top: auto;
     background-color: #FFFFFF;
     padding: 20px;
     text-align: center;
-    margin-top: 20px;
-    bottom: 0;
-    width: 100%;
+    margin-top: auto;
     z-index: 100;
-    box-shadow: 1px 0px 1px 1px #aaaaaa;
 }
 
 
@@ -88,4 +98,3 @@ body {
     float: right;
     text-align: right;
 }
-

@@ -12,7 +12,7 @@
     @yield('header')
     <header class="sticky-header">
             <div class="header-left">
-                <a href="/">Main Page</a>
+                <a href="/tweets">MINI-TWITTER</a>
             </div>
             <div class="header-right">
                 <a href="/tweets">My Tweets</a>
