@@ -14,7 +14,7 @@
 
     @section('content')
     <div class="user">
-        <p>TWEET FROM {{ $tweet->updated_at }}</p>
+        <p>TWEET DATE {{ $tweet->updated_at->format('d.m.Y') }}</p>
         <br>
         <h1>{{ $tweet->title }}</h1>
         <p style="font-size: 24px;">{{ $tweet->text }} and this here is just some further text to see how long the line can get.</p>
@@ -22,9 +22,6 @@
             Edit Tweet
         </button>
         <form action="/tweets/{{$tweet->id}}" method="POST">
-            <button class="editButton" onclick="window.location='/tweets/edit/{{$tweet->id}}'">
-                Edit Tweet
-            </button>
             @csrf
             @method('DELETE')
             <button type="submit" class="deleteButton">Delete Tweet</button>

@@ -55,7 +55,7 @@ class TweetController extends Controller
         //return view('tweets/index');
 
         // Get Data from the DB
-        $tweets = Tweet::all();
+        $tweets = Tweet::orderBy('updated_at', 'desc')->get();
 
         //Send the Data to View
         return view('tweets/index', [

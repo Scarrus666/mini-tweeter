@@ -9,6 +9,9 @@ body {
 }
 
 .sticky-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: fixed;
     top: 0;
     width: 100%;
@@ -18,10 +21,22 @@ body {
     height: 50px;
 }
 
+.myTweets {
+    font-size: 18px;
+}
+
+.createTweet {
+    font-size: 16px;
+}
+
 .index {
     font-size: 24px;
     font-weight: 900;
     color: black;
+}
+
+form {
+    display: inline-block;
 }
 
 a:link { text-decoration: none; }
@@ -154,6 +169,9 @@ p {
 }
 
 .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: auto;
     background-color: #FFFFFF;
     padding: 20px;
@@ -162,7 +180,6 @@ p {
     height: 5px;
     z-index: 100;
 }
-
 
 .footer p {
     margin: 0;

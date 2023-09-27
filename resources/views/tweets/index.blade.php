@@ -22,14 +22,14 @@
     @section('content')
 
         <div class="user">
-            <p>FEED VON</p>
+            <p>FEED OF</p>
             <h1>Alexandru Iordachel</h1>
         </div>
 
         @foreach ($tweets as $tweet)
         <div class="container">
             
-            <p class="date">{{ $tweet->updated_at }}</p>
+            <p class="date">{{ $tweet->updated_at->format('d.m.Y') }}</p>
             <h3>{{ $tweet->title }}</h3>
             <p>{{ $tweet->text }}</p>
             
