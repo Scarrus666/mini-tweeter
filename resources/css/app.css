@@ -15,7 +15,25 @@ body {
     margin-bottom: 25px;
     background-color: #fff;
     padding: 10px 0;
+    height: 50px;
 }
+
+.index {
+    font-size: 24px;
+    font-weight: 900;
+    color: black;
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
 
 h3 {
     margin-left: 20px;
@@ -75,6 +93,23 @@ p {
     background-color: #FF0000;
 }
 
+.viewButton {
+    display: table;
+    margin-right: 10px; /* Adjust the spacing between the buttons as needed */
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    display: inline-block !important; /* Add !important to ensure this style overrides any conflicting styles */
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
 .date {
     font-size: 14px;
     color: #888888;
@@ -124,6 +159,7 @@ p {
     padding: 20px;
     text-align: center;
     margin-top: auto;
+    height: 5px;
     z-index: 100;
 }
 

@@ -32,3 +32,7 @@ Route::get('massage', [TweetController::class, 'massage']);
 Route::delete('tweets/{id}', [TweetController::class, 'deleteTweet']);
 
 Route::post('tweets/store', [TweetController::class, 'store']);
+
+Route::get('tweets/edit/{id}', [TweetController::class, 'edit']);
+
+Route::post('tweets/update/{id}', [TweetController::class, 'update']);

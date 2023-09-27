@@ -158,5 +158,51 @@ class TweetController extends Controller
         return redirect('/tweets'); // Redirect after deletion
     }
 
+    public function edit($id)
+        {
+            $tweets = Tweet::all();
+            if (!$tweets) 
+                {
+                    return abort(404); // Return a 404 error if no tweets found
+                }
+    
+            $tweet = Tweet::find($id);
+            if (!$tweet) 
+                {
+                    return abort(404); // Return a 404 error if the tweet is not found
+                }
+    
+            return view('tweets/edit', ['tweet' => $tweet, 'tweets' => $tweets, 'id' => $id]);
+
+            // ALTERNATIVELY
+            // return view('tweets/edit', compact('tweet'))
+        }
+
+    public function update(Request $request, $id)
+        {
+            // Validation if needed
+            $validated = $request->validate([
+            'title' => 'required|max:70',
+            'text' => 'required|max:280',
+        ], 
+        [
+            'title.required' => 'The title field is required.',
+            'content.required' => 'The content field is required.',
+        ]);
+
+            $tweet = Tweet::find($request->id);
+
+            if (!$tweet) {
+                return abort(404, 'Record not found');
+            }
+
+            $tweet->title = $request->input('title');
+            $tweet->text = $request->input('text');
+            
+            $tweet->save();
+
+            return redirect('/tweets');        
+        }
+
 }
 

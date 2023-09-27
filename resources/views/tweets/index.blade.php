@@ -33,7 +33,7 @@
             <h3>{{ $tweet->title }}</h3>
             <p>{{ $tweet->text }}</p>
             
-            <a href="/tweets/{{$tweet->id}}">
+            <a href="/tweets/{{$tweet->id}}">   
                 <button class="viewButton">View complete Message</button>
             </a>
             

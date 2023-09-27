@@ -18,8 +18,11 @@
         <br>
         <h1>{{ $tweet->title }}</h1>
         <p style="font-size: 24px;">{{ $tweet->text }} and this here is just some further text to see how long the line can get.</p>
+        <button class="editButton" onclick="window.location='/tweets/edit/{{$tweet->id}}'">
+            Edit Tweet
+        </button>
         <form action="/tweets/{{$tweet->id}}" method="POST">
-            <button class="editButton" onclick="/tweets">
+            <button class="editButton" onclick="window.location='/tweets/edit/{{$tweet->id}}'">
                 Edit Tweet
             </button>
             @csrf
