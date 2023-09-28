@@ -246,9 +246,72 @@ textarea
 .footer-left {
     float: left;
     text-align: left;
+    padding: 20px;
 }
 
 .footer-right {
     float: right;
     text-align: right;
+    padding: 20px;  
+}
+
+@media screen and (max-width: 768px) {
+    .sticky-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .header-left,
+    .header-right {
+        float: none;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .header-right a {
+        margin-left: 0;
+    }
+
+        .container {
+        width: 90%;
+    }
+
+    /* Additional styles for smaller screens */
+}
+
+/* Header */
+.header {
+    background-color: #fff;
+    padding: 10px 0;
+}
+
+.header-left, .header-right {
+    display: inline-block;
+}
+
+.header-left {
+    float: left;
+}
+
+.header-right {
+    float: right;
+}
+
+.header-right a {
+    margin-left: 20px;
+}
+
+/* Main content area */
+.main-content {
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
 }
