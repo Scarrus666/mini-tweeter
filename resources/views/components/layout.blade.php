@@ -15,8 +15,8 @@
                 <a class="index" href="/tweets">MINI-TWITTER</a>
             </div>
             <div class="header-right">
-                <a href="/tweets">My Tweets</a>
-                <a href="{{url('create')}}">Create Tweet</a>
+                <a href="/tweets" class="myTweets">My Tweets</a>
+                <a href="{{url('create')}}"><button class="createTweet">+ Create Tweet</button></a>
             </div>
         </div>
         </header>

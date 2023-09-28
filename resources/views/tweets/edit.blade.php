@@ -10,20 +10,24 @@
     @vite('resources/css/app.css')
 </head>
 <body>
+
+    <div class="user">
+        <br><br>
+        <h1>Edit Tweet</h1>
+    </div>
+
     <div class="container">
 
-        <h1>Message Form</h1>
-
-        <form action="/tweets/update/{{ $tweet->id }}" method="POST">
+        <form action="/tweets/update/{{ $tweet->id }}" method="POST" class="form">
             @csrf
 
-            <label for="title">Title:</label>
+            <label for="title">Title</label>
             <input type="text" id="title" name="title" value="{{ $tweet->title }}">
 
-            <label for="text">Message:</label>
+            <label for="text">Text</label>
             <textarea id="text" name="text" rows="4" cols="50" >{{ $tweet->text }}</textarea><br>
 
-            <button class="viewButton" type="submit" value="Submit">Post Tweet</button>
+            <button class="create-button" type="submit" value="Submit">Post Tweet</button>
         </form> 
     </div>
 </body>
